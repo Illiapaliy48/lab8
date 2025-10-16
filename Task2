@@ -1,0 +1,19 @@
+
+N = int(input("Введіть кількість рядків: "))
+
+lines = []
+
+for i in range(N):
+    line = input(f"Введіть рядок {i+1} (парна довжина): ")
+    if len(line) % 2 != 0:
+        print("Довжина рядка непарна! Пропускаємо...")
+        continue
+    
+    mid = len(line) // 2
+    new_line = line[:mid-1] + line[mid-1:mid+1].upper() + line[mid+1:]
+    lines.append(new_line)
+
+
+print("\nМодифіковані рядки:")
+for l in lines:
+    print(l)
