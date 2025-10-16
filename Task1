@@ -1,0 +1,11 @@
+
+s = input("Введіть рядок зі словами, розділеними пробілами: ")
+
+words = s.split()
+
+word_count = len(words)
+
+longest_word = max(words, key=len)
+
+print("Кількість слів у рядку:", word_count)
+print("Найдовше слово:", longest_word)
